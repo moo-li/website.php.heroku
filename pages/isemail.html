@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>is_email() - moo.li</title>
+	<meta name="MyPages.current_menu_href" content="isemail" />
+</head>
+
+<body>
+	<div>
+		<img alt="moo.li" id="logo" src="_system/images/cartouche_foreground_isemail.png" />
+	</div>
+
+	<div id="text">
+		<dl>
+			<dt>What is is_email()?</dt>
+			<dd class="hidden-by-script">
+			<ul>
+				<li><dfn id="ezUser">is_email()</dfn> is a PHP function to validate an email address. Simple, no?</li>
+				<li>No.</li>
+				<li>Since starting to write <code>is_email()</code> I've learned more than I ever wanted to about internet RFCs and how domain names work and how SMTP works.</li>
+				<li>Trust me, you don't need to know all that stuff - just <a href="http://code.google.com/p/isemail/source/browse/trunk">download</a> <code>is_email()</code> and use it. It's free and it's open source</li>
+				<li>I compiled over 200 unit tests and compared <code>is_email()</code> against all the other email validators I could find. It scored 100%. None of the others got above 80% except for Cal Henderson's (we co-developed the unit tests and he rewrote his validator at the same time as I was finishing <code>is_email()</code>).</li>
+			</ul>
+			</dd>
+
+			<dt>What RFCs do I need to understand?</dt>
+			<dd class="hidden-by-script">
+			<ul>
+				<li>None, that's the point. I've done it for you.</li>
+				<li>If you really want to get into it then <a href="http://www.dominicsayers.com/isemail/">read my article</a></li>
+			</ul>
+			</dd>
+
+			<dt>Is it perfect?</dt>
+			<dd class="hidden-by-script">
+			<ul>
+				<li>No, it doesn't do international domain names.</li>
+				<li>The other issue is that the RFCs are not very good. There are some edge cases that are valid but not likely in the real world.</li>
+				<li>So I found myself sometimes making a choice between strict RFC compliance and real-world usefulness. I'm not happy with that compromise and I'd like to do a new version where that choice is parameterised and you, the website developer, get to decide.</li>
+				<li>At the moment I haven't got time to do this myself. But it's open source software - why don't you have a go yourself? I'm happy to check in any code that passes all the unit tests.</li>
+			</ul>
+			</dd>
+		</dl>
+	</div>
+</body>
+
+</html>
